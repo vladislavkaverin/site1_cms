@@ -13,6 +13,7 @@ use site1\App;
 //экземпляр класса
 new App();
 
-//обращаемся к статическому свойству $app(объекту класса Registry), и вызываем у него метод getProperties()
-debug(App::$app->getProperties());
+throw new Exception('Page not found', 404);
 
+//обращаемся к статическому свойству $app(объекту класса Registry), и вызываем у него метод getProperties()
+//debug(App::$app->getProperties());

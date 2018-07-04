@@ -24,6 +24,10 @@ class App
 
         //заполняем контейнер $app данными из params.php
         $this->getParams();
+
+        //Создаём объект класса исключений
+        new ErrorHandler();
+
     }
 
     protected function getParams(){
