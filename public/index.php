@@ -7,13 +7,10 @@
  */
 require_once dirname(__DIR__) . '/config/init.php';
 require_once LIBS . '/functions.php';
+require_once CONF . '/routes.php';
 
 use site1\App;
+use site1\Router;
 
 //экземпляр класса
 new App();
-
-throw new Exception('Page not found', 404);
-
-//обращаемся к статическому свойству $app(объекту класса Registry), и вызываем у него метод getProperties()
-//debug(App::$app->getProperties());

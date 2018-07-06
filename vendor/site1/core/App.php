@@ -28,6 +28,8 @@ class App
         //Создаём объект класса исключений
         new ErrorHandler();
 
+        Router::dispatch($query);
+
     }
 
     protected function getParams(){
