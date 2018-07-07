@@ -9,9 +9,12 @@
 namespace app\controllers;
 
 
-class MainController
+use site1\App;
+
+class MainController extends AppController
 {
     public function indexAction(){
-        echo __METHOD__;
+        //debug($this->route);
+        $this->setMeta(App::$app->getProperty('shop_name'), "descSetMeta", "keywordsSetMeta");
     }
 }

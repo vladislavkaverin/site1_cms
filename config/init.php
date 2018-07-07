@@ -15,7 +15,7 @@ define("CORE", '/vendor/site1/core');
 define("LIBS", ROOT . '/vendor/site1/core/libs');
 define("CACHE", ROOT . '/tmp/cache');
 define("CONF", ROOT . "/config");
-define("LAYOUT", ROOT . 'default');
+define("LAYOUT", 'default');
 
 
 //select protocol https or http
