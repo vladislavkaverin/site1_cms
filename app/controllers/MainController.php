@@ -10,14 +10,19 @@ namespace app\controllers;
 
 
 use site1\App;
+use site1\Cache;
 
 class MainController extends AppController
 {
     public function indexAction(){
         $posts = \R::findAll('test');
-        //debug($posts);
-        //debug($this->route);
         $this->setMeta("Site1", "descSetMeta", "keywordsSetMeta");
         $this->set(compact('posts'));
+
+        $cache = Cache::instance();
+        $cache->set('test1', $posts);
+        $data = $cache->get('test');
+        debug($data);
+        //$cache->delete('test1');
     }
 }
