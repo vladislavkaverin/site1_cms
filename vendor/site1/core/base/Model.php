@@ -9,6 +9,8 @@
 namespace site1\base;
 
 
+use site1\Db;
+
 abstract class Model
 {
     //массив свойств модели
@@ -19,7 +21,7 @@ abstract class Model
 
     public function __construct()
     {
-
+        Db::instance();
     }
 
 }

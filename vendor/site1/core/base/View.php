@@ -41,7 +41,10 @@ class View
         }
     }
 
+    // отображает данные во view
     public function render($data){
+        //записываем данные из массива в переменную
+        if(is_array($data)) extract($data);
         $viewFile = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
         if (is_file($viewFile)){
             //буферизация

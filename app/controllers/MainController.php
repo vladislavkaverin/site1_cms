@@ -14,7 +14,10 @@ use site1\App;
 class MainController extends AppController
 {
     public function indexAction(){
+        $posts = \R::findAll('test');
+        //debug($posts);
         //debug($this->route);
-        $this->setMeta(App::$app->getProperty('shop_name'), "descSetMeta", "keywordsSetMeta");
+        $this->setMeta("Site1", "descSetMeta", "keywordsSetMeta");
+        $this->set(compact('posts'));
     }
 }
